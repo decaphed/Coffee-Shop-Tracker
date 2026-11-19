@@ -1,0 +1,23 @@
+
+import streamlit as st
+import pandas as pd
+from datetime import datetime
+    
+st.title("Daily Dashboard")
+
+# get sales data
+sales = st.session_state.sales
+
+# calculate todays sales
+today = datetime.now().strftime("%Y-%m-%d")
+sales["Date"] = pd.to_datetime(sales["Date"], format="mixed")
+daily_sales = sales[sales["Date"].dt.strftime("%Y-%m-%d") == today]
+
+# display results
+st.metric("Today's Revenue", daily_sales["Total"].sum())
+
+st.metric("Items Sold", daily_sales["Quantity"].sum())
+
+# display sales
+st.subheader("Today's Sales")
+st.dataframe(daily_sales)
