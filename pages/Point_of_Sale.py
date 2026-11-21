@@ -95,7 +95,7 @@ if st.button("Confirm Payment") and st.session_state.current_order:
     }
     st.session_state.current_order = []
 
-if "receipt" in st.session_state:
+if st.session_state.receipt is not None:
     # show the receipt after payment
     st.subheader("Receipt")
     st.write(f"Transaction: {st.session_state.receipt['Transaction Id']}")

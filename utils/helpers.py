@@ -67,3 +67,7 @@ def initialize_state():
     # start with an empty order
     if "current_order" not in st.session_state:
         st.session_state.current_order = []
+
+    # start without a receipt
+    if "receipt" not in st.session_state:
+        st.session_state.receipt = None
