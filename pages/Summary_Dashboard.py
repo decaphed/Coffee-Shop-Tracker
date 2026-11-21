@@ -24,3 +24,12 @@ st.metric("Items Sold", daily_sales["Quantity"].sum())
 # display sales
 st.subheader("Today's Sales")
 st.dataframe(daily_sales)
+
+# let the user download today's sales
+sales_csv = daily_sales.to_csv(index=False).encode("utf-8")
+st.download_button(
+    "Download today's sales",
+    data=sales_csv,
+    file_name=f"sales_{today}.csv",
+    mime="text/csv"
+)
