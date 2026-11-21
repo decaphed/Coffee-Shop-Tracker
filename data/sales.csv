@@ -1,0 +1,18 @@
+Transaction Id,Date,Name,Size,Quantity,Total
+20261119162929,2026-11-19 16:29:29,Double Espresso Shot,S,2,3.2
+20261119163041,2026-11-19 16:30:41,Espresso Shot,S,0,0.0
+20261119163042,2026-11-19 16:30:42,Espresso Shot,S,0,0.0
+20261119163042,2026-11-19 16:30:42,Espresso Shot,S,0,0.0
+20261119163043,2026-11-19 16:30:43,Espresso Shot,S,0,0.0
+20261119163043,2026-11-19 16:30:43,Espresso Shot,S,0,0.0
+20261119163043,2026-11-19 16:30:43,Espresso Shot,S,0,0.0
+20261119163043,2026-11-19 16:30:43,Espresso Shot,S,0,0.0
+20261119163043,2026-11-19 16:30:43,Espresso Shot,S,0,0.0
+20261119163043,2026-11-19 16:30:43,Espresso Shot,S,0,0.0
+20261119163211,2026-11-19 16:32:11,"[{'Name': 'Espresso Shot', 'Size': 'S', 'Quantity': 1, 'Price': np.float64(1.2), 'Total': np.float64(1.2)}, {'Name': 'Hot Chocolate ', 'Size': 'S', 'Quantity': 1, 'Price': np.float64(2.8), 'Total': np.float64(2.8)}]",S,1,2.8
+20261119163412,2026-11-19 16:34:12,Blueberry Mojito,M,4,8.0
+20261119163651,2026-11-19 16:36:51,Blueberry Mojito,M,4,8.0
+20261119163811,2026-11-19 16:38:11,Blueberry Mojito,M,4,8.0
+20261119163812,2026-11-19 16:38:12,Blueberry Mojito,M,4,8.0
+20261119163815,2026-11-19 16:38:15,Blueberry Mojito,M,4,8.0
+20261119163832,2026-11-19 16:38:32,Espresso Shot,S,3,3.5999999999999996

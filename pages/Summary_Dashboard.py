@@ -2,6 +2,9 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+from utils.helpers import initialize_state
+
+initialize_state()
     
 st.title("Daily Dashboard")
 
