@@ -47,7 +47,10 @@ def initialize_state():
         if SALES_CSV.exists():
             try:
                 # read saved sales rows
-                st.session_state.sales = pd.read_csv(SALES_CSV)
+                st.session_state.sales = pd.read_csv(
+                    SALES_CSV,
+                    dtype={"Transaction Id": str}
+                )
             except pd.errors.EmptyDataError:
                 # keep the empty table when the file has no rows
                 pass
@@ -55,6 +58,11 @@ def initialize_state():
             # create the data folder and sales file
             SALES_CSV.parent.mkdir(parents=True, exist_ok=True)
             st.session_state.sales.to_csv(SALES_CSV, index=False)
+
+    # keep transaction ids as text for display
+    st.session_state.sales["Transaction Id"] = (
+        st.session_state.sales["Transaction Id"].astype(str)
+    )
 
     # start with an empty order
     if "current_order" not in st.session_state:

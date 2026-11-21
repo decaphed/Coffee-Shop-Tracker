@@ -5,5 +5,5 @@ from utils.helpers import SALES_CSV
 
 st.title("Sales Log")
 
-sales = pd.read_csv(SALES_CSV)
+sales = pd.read_csv(SALES_CSV, dtype={"Transaction Id": str})
 st.dataframe(sales)

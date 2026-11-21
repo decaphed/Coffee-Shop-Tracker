@@ -14,7 +14,10 @@ st.subheader("Available Drinks")
 # show the menu as a table
 st.dataframe(st.session_state.menu)
 
-st.session_state.sales = pd.read_csv(SALES_CSV)
+st.session_state.sales = pd.read_csv(
+    SALES_CSV,
+    dtype={"Transaction Id": str}
+)
 
 if not st.session_state.menu.empty:
     # let the user choose a drink
