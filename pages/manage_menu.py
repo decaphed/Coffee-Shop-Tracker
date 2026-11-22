@@ -2,8 +2,6 @@ import pandas as pd
 import streamlit as st
 from utils.helpers import MENU_CSV
 
-# load the menu
-st.session_state.menu = pd.read_csv(MENU_CSV)
 
 st.title("Ground Assembly Specialty Coffee")
 st.header("Manage Your Menu")
