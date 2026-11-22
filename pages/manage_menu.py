@@ -51,7 +51,7 @@ if st.button("Save menu", type="primary"):
         try:
             edited_menu.to_csv(MENU_CSV, index=False)
             st.session_state.menu = edited_menu
-            st.success("Menu saved.")
+            st.write("Menu saved.")
             st.rerun()
         except OSError as error:
             st.error(f"Could not save the menu CSV: {error}")
