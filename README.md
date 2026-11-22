@@ -5,6 +5,7 @@ A simple Streamlit app for managing a coffee shop menu and tracking sales.
 ## Features
 
 - Add, edit, and delete menu items.
+- Upload a CSV file to replace the saved menu.
 - Record orders and show a receipt after payment.
 - View the sales log and daily sales summary.
 - Download today's sales as a CSV file.

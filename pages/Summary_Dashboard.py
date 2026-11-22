@@ -21,7 +21,7 @@ st.metric("Today's Revenue", round(daily_sales["Total"].sum(),2))
 
 st.metric("Items Sold", daily_sales["Quantity"].sum())
 
-# count all-time sales by item
+# count all time sales by item
 popular_items = (
     sales.groupby("Name", as_index=False)["Quantity"]
     .sum()

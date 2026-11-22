@@ -33,7 +33,7 @@ if not st.session_state.menu.empty:
     desired_drink = drink["Name"]
 
     # set how many drinks to add
-    quantity = st.number_input("Quantity", step=1, min_value=0)
+    quantity = st.number_input("Quantity", step=1, min_value=1)
     total = quantity * drink["Price"]
 
     # show the item total
@@ -104,3 +104,4 @@ if st.session_state.receipt is not None:
     st.dataframe(pd.DataFrame(st.session_state.receipt["Items"]))
     # show the amount paid
     st.write(f"Total paid: {st.session_state.receipt['Total']}")
+
