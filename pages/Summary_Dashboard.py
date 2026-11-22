@@ -21,17 +21,17 @@ st.metric("Today's Revenue", round(daily_sales["Total"].sum(),2))
 
 st.metric("Items Sold", daily_sales["Quantity"].sum())
 
-# count all time sales by item
+# count today's sales by item
 popular_items = (
-    sales.groupby("Name", as_index=False)["Quantity"]
+    daily_sales.groupby("Name", as_index=False)["Quantity"]
     .sum()
     .sort_values("Quantity", ascending=False)
 )
 
-# show the most popular items
-st.subheader("Most Popular Items")
+# show today's most popular items
+st.subheader("Most Sold Items Today")
 if popular_items.empty:
-    st.write("No sales have been recorded.")
+    st.write("No sales have been recorded today.")
 else:
     st.bar_chart(popular_items, x="Name", y="Quantity")
 
