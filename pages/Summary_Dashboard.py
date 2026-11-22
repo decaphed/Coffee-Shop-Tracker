@@ -17,7 +17,7 @@ sales["Date"] = pd.to_datetime(sales["Date"], format="mixed")
 daily_sales = sales[sales["Date"].dt.strftime("%Y-%m-%d") == today]
 
 # display results
-st.metric("Today's Revenue", round(daily_sales["Total"].sum(),2))
+st.metric("Today's Revenue", f"{round(daily_sales["Total"].sum(),2)} BD")
 
 st.metric("Items Sold", daily_sales["Quantity"].sum())
 
