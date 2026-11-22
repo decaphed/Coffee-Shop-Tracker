@@ -28,8 +28,8 @@ if uploaded_menu is not None:
             if st.button("Replace menu with uploaded CSV", type="secondary"):
                 uploaded_menu_df.to_csv(MENU_CSV, index=False)
                 st.session_state.menu = uploaded_menu_df
+                st.session_state.pop("menu_editor", None)
                 st.success("Menu replaced with the uploaded CSV.")
-                st.rerun()
     except (pd.errors.EmptyDataError, pd.errors.ParserError):
         st.error("Please upload a valid CSV file.")
 
@@ -37,7 +37,8 @@ if uploaded_menu is not None:
 edited_menu = st.data_editor(
     st.session_state.menu,
     num_rows="dynamic",
-    hide_index=True
+    hide_index=True,
+    key="menu_editor",
 )
 
 # save menu changes
