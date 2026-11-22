@@ -4,7 +4,6 @@ from utils.helpers import MENU_CSV, initialize_state
 
 initialize_state()
 
-st.title("Ground Assembly Specialty Coffee")
 st.header("Manage Your Menu")
 
 # Upload and replace the menu CSV
