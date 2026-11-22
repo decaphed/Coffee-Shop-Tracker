@@ -8,7 +8,7 @@ Coffee Shop Tracker is a Streamlit-based point-of-sale and management applicatio
 
 ## Video Demonstration
 
-[Watch the project demonstration](https://drive.google.com/file/d/1r9X7Urwq9XHVbLdY0hYKUCfbnhCddcJ2/view?usp=sharing)
+[Watch the project demonstration](https://drive.google.com/file/d/1YhRBSzLQvyNCXZGLu349VK9p3zPqvvws/view?usp=sharing)
 
 ## Project Features
 
