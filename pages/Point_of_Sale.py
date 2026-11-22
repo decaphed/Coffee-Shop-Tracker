@@ -21,13 +21,15 @@ st.session_state.sales = pd.read_csv(
 
 if not st.session_state.menu.empty:
     # let the user choose a drink
+    def format_drink(index):
+        name = st.session_state.menu.iloc[index]["Name"]
+        size = st.session_state.menu.iloc[index]["Size"]
+        return f"{name} ({size})"
+
     drink_index = st.selectbox(
         "Desired Drink",
         range(len(st.session_state.menu)),
-        format_func=lambda index: (
-            f"{st.session_state.menu.iloc[index]['Name']} "
-            f"({st.session_state.menu.iloc[index]['Size']})"
-        )
+        format_func=format_drink
     )
     drink = st.session_state.menu.iloc[drink_index]
     desired_drink = drink["Name"]
@@ -87,6 +89,8 @@ if st.button("Confirm Payment") and st.session_state.current_order:
     new_sales = pd.concat([st.session_state.sales, log], ignore_index=True)
     new_sales.to_csv(SALES_CSV, index=False)
     st.session_state.sales = new_sales
+
+    # displays the reciept after payment confirmation
     st.session_state.receipt = {
         "Transaction Id": transaction_id,
         "Date": transaction_date,
